@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
  
 #===============================================================================================================================================
-# Scanner RouterHunterBR v2.0 - InurlBrasil Team 
+# Scanner RouterHunterBR v2.0 - InurlBrasil Team - By Jhonathan Davi A.K.A jh00nbr
 # Tool used to find and perform tests in vulnerable routers on the internet.
 # Facebook: https://fb.com/JhonVipNet
 # Blog: http://blog.inurl.com.br
