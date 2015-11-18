@@ -196,7 +196,7 @@ def bruteforce_router(ip,user,password,route):
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='The Routerhunter was designed to run over the Internet looking for defined ips tracks or random in order to automatically exploit the vulnerability DNSChanger on home routers.', prog='Routerhunter', formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=100,width=200))
 	parser.add_argument("-range", "--range", help="Set range of IP", metavar= "192.168.1.0-255", default="", required=False)
-	parser.add_argument("-bruteforce", "--bruteforce", help = "Performs brute force with users and passwords standards, and soon after defines the malicious DNS.", action="store_true")
+	parser.add_argument("-bruteforce", "--bruteforce", help = "Brute force with users and passwords on routers that requires authentication, forcing alteration of dns.", action="store_true")
 	parser.add_argument("-startip", "--startip", help="Start - IP range customized with wildcard / 201.*.*.*", metavar= "192.168.*.*", default="", required=False)
 	parser.add_argument("-endip", "--endip", help="End - IP range customized with wildcard / 201.*.*.*", metavar= "192.168.*.*", default="", required=False)
 	parser.add_argument("-dns1", "--dns1", help = "Define malicious dns1", metavar= "8.8.8.8", default="8.8.8.8", required=True)
