@@ -31,6 +31,12 @@ by this program.
 
  * D-Link DSL-2640B Unauthenticated Remote DNS Change Exploit            
    reference: http://1337day.com/exploit/23302/ 
+ * D-Link DSL-2780B DLink_1.01.14 - Unauthenticated Remote DNS Change           
+   reference: https://www.exploit-db.com/exploits/37237/ 
+ * D-Link DSL-2730B AU_2.01 - Authentication Bypass DNS Change            
+   reference: https://www.exploit-db.com/exploits/37240/ 
+ * D-Link DSL-526B ADSL2+ AU_2.01 - Unauthenticated Remote DNS Change           
+   reference: https://www.exploit-db.com/exploits/37241/ 
 
  * DSLink 260E - Authenticated routers - DNS Changer - Bruteforce 
    reference: https://www.youtube.com/watch?v=tNjy91g2Rak                             
