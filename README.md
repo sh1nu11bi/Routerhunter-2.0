@@ -57,6 +57,12 @@ by this program.
    reference: https://www.youtube.com/watch?v=tNjy91g2Rak                             
    http://blog.inurl.com.br/2015/03/dslink-260e-defaut-passwords-dns-change_17.html 
 
+### Requeriments
+```
+import sys, os, argparse, itertools, requests, random, time, threading, base64, socket
+from datetime import datetime
+```
+
 ### Usage
 
 ```
@@ -79,14 +85,14 @@ python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --randomip --limitip 10 --t
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 -rip -lmtip 10 --threads 10
 
 ```
-![rip](http://i.imgur.com/CAhvz1T.png)
+
 
 ```
 Scanner in range ip:
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --range 192.168.25.0-255 --threads 10
 
 ```
-![range](http://i.imgur.com/sA1IKTp.png)
+
 ```
 IP range customized with wildcard / Ex: --startip 201.*.*.* -  --endip 201.*.*.*
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --startip 192.168.*.* --endip 192.168.*.* --threads 10
@@ -95,4 +101,8 @@ python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --startip 192.168.*.* --end
 Brute force with users and passwords on routers that requires authentication, forcing alteration of dns - DSLink 260E.
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.4 --range 177.106.19.65-70 --bruteforce --threads 10
 ```
+
+### Screenshots 
+![rip](http://i.imgur.com/CAhvz1T.png)
+![range](http://i.imgur.com/sA1IKTp.png)
 ![brute](http://i.imgur.com/IhtaZhw.png)
