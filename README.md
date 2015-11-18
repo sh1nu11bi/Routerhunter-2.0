@@ -1,5 +1,5 @@
 # Scanner Routerhunter 2.0
-Tool used to find vulnerable routers and devices on the Internet and perform tests.
+ Tool used to find vulnerable routers and devices on the Internet and perform tests
 
 ```
 	          _	          _           _		   		   
@@ -8,7 +8,7 @@ Tool used to find vulnerable routers and devices on the Internet and perform tes
  |_| |___|___|_| |___|_| |_|_|___|_|_|_| |___|_|
 				       BR - v2.0
 
- Tool used to find vulnerable routers and devices on the Internet and perform tests..
+ Tool used to find vulnerable routers and devices on the Internet and perform tests.
 
 [ Coded by Jhonathan Davi a.k.a jh00nbr - jhoonbr at protonmail.ch ]
 [ fb.com/JhonVipNet - twitter.com/jh00nbr - github.com/jh00nbr/ - blog.inurl.com.br - www.youtube.com/c/Mrsinisterboy ]
@@ -32,7 +32,7 @@ by this program.
  * D-Link DSL-2640B Unauthenticated Remote DNS Change Exploit            
    reference: http://1337day.com/exploit/23302/ 
 
- * DSLink 260E - Exploiting - Defaut Passwords DNS Change 
+ * DSLink 260E - Authenticated routers - DNS Changer - Bruteforce 
    reference: https://www.youtube.com/watch?v=tNjy91g2Rak                             
    http://blog.inurl.com.br/2015/03/dslink-260e-defaut-passwords-dns-change_17.html 
 ### Features
