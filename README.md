@@ -33,7 +33,7 @@ by this program.
 
 ### Description
 ------
-  The Router Hunterbr is an automated security tool that finds and performs vulnerabalidades tests on routers and vulnerable devices on the Internet. The Routerhunter was designed to run over the Internet looking for defined ips tracks or random in order to automatically exploit the vulnerability DNSChanger on home routers.
+  The RouterhunterBR is an automated security tool que finds vulnerabilities and performs tests on routers and vulnerable devices on the Internet. The RouterhunterBR was designed to run over the Internet looking for defined ips tracks or random in order to automatically exploit the vulnerability DNSChanger on home routers.
   
   The script explores four vulnerabilities in routers
   
